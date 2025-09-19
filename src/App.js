@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import jsPDF from 'jspdf';  
+import jsPDF from 'jspdf';
 
 export default function App() {
   const [notas, setNotas] = useState([]);
@@ -54,8 +54,8 @@ export default function App() {
     <div
       style={{
         background: `linear-gradient(135deg, #3B0E5E 0%, #D52487 100%)`,
-        backgroundSize: 'cover', 
-        backgroundPosition: 'right', 
+        backgroundSize: 'cover',
+        backgroundPosition: 'right',
         minHeight: '100vh',
         padding: '100px',
         color: '#ddd',
@@ -74,8 +74,30 @@ export default function App() {
           width: '100%',
           boxShadow: '0 0 20px rgba(255, 0, 150, 0.5)',
           textAlign: 'center',
+          position: 'relative', 
         }}
       >
+        
+        <button
+          onClick={baixarPDF}
+          style={{
+            position: 'absolute',
+            top: '20px',
+            right: '20px',
+            padding: '8px 14px',
+            fontSize: '14px',
+            borderRadius: '8px',
+            border: 'none',
+            background: 'linear-gradient(90deg, #7D4BFF 0%, #D62487 100%)',
+            color: '#fff',
+            fontWeight: 'bold',
+            cursor: 'pointer',
+            boxShadow: '0 4px 12px rgba(214, 36, 135, 0.5)',
+          }}
+        >
+          Baixar PDF
+        </button>
+
         <h1 style={{ marginBottom: '20px', fontWeight: 'bold' }}>Notas Post-it</h1>
 
         <input
@@ -152,7 +174,7 @@ export default function App() {
                 fontFamily: "'Roboto Mono', monospace",
               }}
             >
-              {/* Barra colorida lateral */}
+            
               <div
                 style={{
                   position: 'absolute',
@@ -166,7 +188,7 @@ export default function App() {
                 }}
               />
 
-              {/* Número */}
+            
               <div
                 style={{
                   position: 'absolute',
@@ -205,24 +227,6 @@ export default function App() {
             </div>
           ))}
         </div>
-
-        <button
-          onClick={baixarPDF}
-          style={{
-            marginTop: '40px',
-            width: '90%',
-            padding: '15px',
-            borderRadius: '10px',
-            border: 'none',
-            background: 'linear-gradient(90deg, #7D4BFF 0%, #D62487 100%)',
-            color: '#fff',
-            fontWeight: 'bold',
-            cursor: 'pointer',
-            boxShadow: '0 6px 16px rgba(214, 36, 135, 0.7)',
-          }}
-        >
-          Baixar Notas
-        </button>
       </div>
     </div>
   );
