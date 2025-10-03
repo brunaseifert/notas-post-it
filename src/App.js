@@ -74,10 +74,9 @@ export default function App() {
           width: '100%',
           boxShadow: '0 0 20px rgba(255, 0, 150, 0.5)',
           textAlign: 'center',
-          position: 'relative', 
+          position: 'relative',
         }}
       >
-        
         <button
           onClick={baixarPDF}
           style={{
@@ -174,7 +173,6 @@ export default function App() {
                 fontFamily: "'Roboto Mono', monospace",
               }}
             >
-            
               <div
                 style={{
                   position: 'absolute',
@@ -188,7 +186,6 @@ export default function App() {
                 }}
               />
 
-            
               <div
                 style={{
                   position: 'absolute',
@@ -204,7 +201,19 @@ export default function App() {
               </div>
 
               <h3 style={{ margin: '25px 0 10px 20px' }}>{nota.titulo}</h3>
-              <p style={{ marginLeft: '20px', fontSize: '14px' }}>{nota.texto}</p>
+              
+              <p
+                style={{
+                  marginLeft: '20px',
+                  fontSize: '14px',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
+                  whiteSpace: 'pre-wrap',
+                  maxWidth: '140px',
+                }}
+              >
+                {nota.texto}
+              </p>
 
               <button
                 onClick={() => excluirNota(nota.id)}
