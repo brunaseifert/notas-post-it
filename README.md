@@ -2,7 +2,8 @@
 
 O usuário pode adicionar, excluir e baixar notas em formato PDF. Possui um layout moderno e colorido.
 
-![Interface Notas Post-it](./Notas post-it.png)
+![Interface Notas Post-it](./Notas%20post-it.png)
+
 
 ## Tecnologias Usadas
 
